@@ -7,6 +7,12 @@ interface Balance {
   total: number;
 }
 
+interface CreateTransactionDTO {
+  title: string;
+  value: number;
+  type: 'income' | 'outcome';
+}
+
 class TransactionsRepository {
   private transactions: Transaction[];
 
@@ -22,8 +28,16 @@ class TransactionsRepository {
     // TODO
   }
 
-  public create(): Transaction {
-    // TODO
+  public create({ title, value, type }: CreateTransactionDTO): Transaction {
+    const transaction = new Transaction({
+      title,
+      value,
+      type,
+    });
+
+    this.transactions.push(transaction); // armazena o objeto criado à variável de array(porque não há banco de dados para esse desafio)
+
+    return transaction;
   }
 }
 

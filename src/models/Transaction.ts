@@ -1,3 +1,4 @@
+// Responsável por preparar as classes dos objetos que serão criados(instanciados) de fato. Geralmente os objetos são criados nos Services.
 import { v4 as uuid } from 'uuid';
 
 class Transaction {
