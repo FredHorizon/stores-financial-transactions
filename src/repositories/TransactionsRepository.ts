@@ -1,3 +1,4 @@
+// Repositórios lidam com todos os dados. Geralmente usado para manipular o banco de dados
 import Transaction from '../models/Transaction';
 
 interface Balance {
